@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <title>WeatherApp</title>
+    <link rel="stylesheet" href="src/styles.css" />
+    <link rel="js" href="src/index.js" />
+  </head>
+
+  <body>
+    <div class="comtainer">
+      <form id="form">
+        <input
+          class="weather"
+          type="text"
+          placeholder="What is going on in..."
+          autocomplete="off"
+          id="city-name"
+        />
+        <button type="submit" class="btn-outline-primary" id="but">
+          Let's See!
+        </button>
+      </form>
+
+      <h1>
+        <span id="hora"> 15: </span>
+        <span id="minutos"> 45 </span>
+        <br />
+        <span id="currentCity"> Amsterdam </span>
+        <br />
+        Chance of rain: 15%
+      </h1>
+
+      <h2>
+        <span id="today"> Friday </span>
+        <br />
+        15°
+        <br />
+        Raining
+      </h2>
+
+      <h3>
+        Oh no! Its Raining
+        <br />
+        Take your raincoat today!
+      </h3>
+
+      <img
+        class="photo"
+        src="data:image/png;base64,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"
+        alt="rain"
+      />
+
+      <div class="row">
+        <div class="col">Fri 🌤</div>
+        <div class="col">Sat 🌤</div>
+        <div class="col">Sun ☀️</div>
+        <div class="col">Mon ☀️</div>
+      </div>
+
+      <br />
+
+      <a
+        class="link"
+        href="https://www.accuweather.com/en/nl/amsterdam/249758/weather-radar/249758"
+        >To the Weather Radar !!
+      </a>
+    </div>
+  </body>
+</html>
